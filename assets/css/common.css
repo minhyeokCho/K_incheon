@@ -1,0 +1,400 @@
+@charset "utf-8";
+
+/* ============================== [ 레이아웃 리셋 Layout Reset ] ========================================================================================== */
+/* Reset */
+html,body,div,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+abbr,address,big,cite,code,del,dfn,font,figure,figcaption,img,ins,q,s,samp,small,strike,sub,sup,tt,var,
+b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {font:20px/1em 'Noto Sans KR',sans-serif; letter-spacing:-0.04em;}
+button,input,textarea {font:20px/1em 'Noto Sans KR',sans-serif; letter-spacing:-0.04em;}
+select {font:20px/1em 'Noto Sans KR',sans-serif; letter-spacing:-0.04em;}
+::selection {color:#fff; background-color:#039260;}
+
+/* ============================== [ 공통스타일 ] ========================================================================================== */
+.go_view {/* background-color:rgba(0,0,0,0.3); */ position:absolute; left:0; top:0; height:100%; width:100%;}
+
+
+/* ************************************************************************************************************************************************************
+						《 m_header 》
+************************************************************************************************************************************************************ */
+#m_head {display: none; align-items: center; justify-content: space-between; padding:7px 18px 7px 10px; box-sizing: border-box;}
+#m_head .m_logo a {display: block; width: 225px; height: 30px; background-image:url(../images/common/m_logo.png); background-position: center center; background-repeat: no-repeat; background-size:225px auto;}
+#m_head .m_logo a.logo:hover {background-image:url(../images/common/logo_over.png); background-size:contain;}
+#m_head .btn_menu a span {display: block; width: 25px; height: 3px; background-color: #fff;}
+#m_head .btn_menu a span ~ span {margin-top: 4px;}
+
+/* ************************************************************************************************************************************************************
+						《 PC_GNB 》
+************************************************************************************************************************************************************ */
+header {position: sticky; top: 0; left: 0; width: 100%; background-color:rgba(3, 146, 96, 0.75); z-index:100;}
+#pc_head {box-sizing:border-box; padding:14px 84px 14px 30px; display:flex; justify-content:space-between; align-items:center; }
+
+/* 로고 */
+.h1_logo a.logo {display:block; width:280px; height:50px; background-image:url(../images/common/main_logo.png); background-position: center center; background-repeat: no-repeat; background-size:280px 50px; }
+.h1_logo a.logo:hover {background-image:url(../images/common/logo_over.png); background-size:contain;}
+
+/* 메뉴 */
+.menu_wrap {display:flex; align-items:center;}
+.lnb_menu {display:flex; align-items:center;}
+.lnb_menu li ~ li {margin-left:55px;}
+.lnb_menu a {font-size:22px; font-weight:500; color:#fff;}
+.util_menu {display:flex; align-items:center; margin-left:130px;}
+.util_menu li ~ li {margin-left:30px;}
+.util_menu a {font-size:15px; font-weight:500; color:#fff;}
+
+/* ************************************************************************************************************************************************************
+						《 #CONTENTS 》
+************************************************************************************************************************************************************ */
+#contents {width:100%; margin-top:-78px;}
+
+/* ============================== [ 메인이미지 ] ========================================================================================== */
+.main_area {background:url(../images/common/main_img.jpg) no-repeat center center; background-size: cover; height: 972px;}
+.main_area .main_txt {padding-top: 404px;}
+.main_area .main_txt .txt_img {width: 100%; max-width: 1026px; height: auto; margin: 0 auto; padding: 0 15px; box-sizing: border-box;}
+.main_area .main_txt .txt_img img {width: 100%; height: 100%;}
+.main_area .main_txt p {color: #fff; font-size: 34px; font-weight: 500; line-height: 1.167em; margin-top: 45px; text-align: center;}
+
+/* ============================== [ 교통정보 ] ========================================================================================== */
+.traffic_area {background:url(../images/common/traffic_bg.jpg) no-repeat 0 0; background-size: cover; padding: 60px 45px 30px 55px; box-sizing: border-box; position: relative;}
+
+/* 평균속도/시간 */
+.info_txt_wrap .info_txt {display: flex; align-items: center;}
+.info_txt_wrap .info_txt.gimpo {justify-content: flex-end;}
+.info_txt_wrap .info_txt.incheon {position: absolute; left: 55px; top: 405px;}
+.info_txt_wrap .info_txt p {font-weight: 700; font-size: 30px; line-height: 1.167em;}
+.info_txt_wrap .info_txt .info_detail {margin-left: 20px;}
+.info_txt_wrap .info_txt .info_detail p {font-weight: 500; font-size: 20px; line-height: 1.2em;}
+.info_txt_wrap .info_txt .info_detail span {color: #14b031;}
+
+/* -------------------------- [ 교통정보 도식화 ] -------------------------------------- */
+.traffic_wrap {margin: 60px auto 105px; max-width: 1584px; display: flex; justify-content: space-between;}
+.traffic_wrap .inner {display:flex;}
+.traffic_wrap .inner.inner_01 {width:56.1%;}
+.traffic_wrap .inner.inner_02 {width:43.9%;}
+
+/* ic 영역 */
+.traffic_wrap .ic_wrap {margin-top: 16px; position: relative;}
+.traffic_wrap .ic_wrap .img {width: 95px; height: 95px; margin: 0 auto;}
+.traffic_wrap .ic_wrap .img img {width: 100%; height: 100%;}
+.traffic_wrap .ic_wrap p {margin-top: 32px; font-size: 22px; font-weight: 700; text-align: center; width: 132px; position: absolute; left: 50%; transform: translateX(-50%);}
+
+/* 교통 상태 */
+.traffic_wrap .trf_area {width: 100%; max-width: 192px; margin: 0 5px;}
+.traffic_wrap .trf_area span {display: block; font-size: 16px; text-align: center;}
+.traffic_wrap .trf_area .trf_bar {width: 100%; height: 12px; margin: 0 auto; border-radius: 10px; display: block;}
+.traffic_wrap .trf_area .trf_bar.green {background-color: #14b031;}
+.traffic_wrap .trf_area .trf_bar.yellow {background-color: #ffdc00;}
+.traffic_wrap .trf_area .trf_bar.red {background-color: #ff0000;}
+.traffic_wrap .trf_area .trf_bar.bk {background-color: #595959;}
+.traffic_wrap .trf_area .arrow_right {display: block; width: 66px; height: 9px; margin:0 auto 10px; background: url(../images/common/arrow_right.png) no-repeat 0 0; background-size: 100% 100%;}
+.traffic_wrap .trf_area .arrow_left {display: block; width: 66px; height: 9px; margin: 10px auto 0; background: url(../images/common/arrow_left.png) no-repeat 0 0; background-size: 100% 100%;}
+.traffic_wrap .trf_area .trf_top span {margin-bottom: 12px;}
+.traffic_wrap .trf_area .trf_btm {margin-top: 6px;}
+.traffic_wrap .trf_area .trf_btm span {margin-top: 12px;}
+
+/* 범례 */
+.legend {padding-top: 80px;}
+.legend .time {line-height: 1.2em; margin-bottom: 25px; text-align: center;}
+.legend .cotn {display: flex; align-items: center; justify-content: center;}
+.legend .lgd_wrap {display: flex; align-items: center;}
+.legend .lgd_wrap ~ .lgd_wrap {margin-left: 10px;}
+.legend .lgd_wrap .trf_bar {display: block; width: 40px; height: 12px; border-radius: 8px;}
+.legend .lgd_wrap .trf_bar.green {background-color: #14b031;}
+.legend .lgd_wrap .trf_bar.yellow {background-color: #ffdc00;}
+.legend .lgd_wrap .trf_bar.red {background-color: #ff0000;}
+.legend .lgd_wrap .trf_bar.bk {background-color: #595959;}
+.legend .lgd_wrap p {line-height: 1.2em; margin-left: 8px;}
+
+/* ============================== [ 바로가기메뉴 ] ========================================================================================== */
+.quick_menu {background-color:#fff;}
+.quick_menu ul {display: flex;}
+.quick_menu ul li {width:calc(20% - 5px); position: relative; height:300px; display:flex; align-items:center; flex-direction: column; justify-content:center; background-position:center center; background-repeat:no-repeat; background-size:cover;}
+.quick_menu ul li::after {display:block; content: ''; width:100%; height:100%; position:absolute; left:0; top:0; background-color:rgba(3, 146, 96, 0.75);}
+.quick_menu ul li ~ li {margin-left:6px;}
+.quick_menu ul li.map {background-image:url(../images/common/quick_01.jpg);}
+.quick_menu ul li.noti {background-image:url(../images/common/quick_02.jpg);}
+.quick_menu ul li.car {background-image:url(../images/common/quick_03.jpg);}
+.quick_menu ul li.park {background-image:url(../images/common/quick_04.jpg);}
+.quick_menu ul li.cs {background-image:url(../images/common/quick_05.jpg);}
+.quick_menu ul li.cctv {display:none;}
+.quick_menu ul li .quick {background-size: 115px 90px; background-repeat: no-repeat; background-position: 0 0; width: 115px; height: 90px; display: block; margin: 0 auto; z-index:1; position:relative;}
+.quick_menu ul li .quick.i_map {background-image: url(../images/common/i_map.png);}
+.quick_menu ul li .quick.i_noti {background-image: url(../images/common/i_noti.png);}
+.quick_menu ul li .quick.i_car {background-image: url(../images/common/i_car.png);}
+.quick_menu ul li .quick.i_cctv {background-image: url(../images/common/i_cctv.png);}
+.quick_menu ul li .quick.i_park {background-image: url(../images/common/i_park.png);}
+.quick_menu ul li .quick.i_cs {background-image: url(../images/common/i_cs.png);}
+.quick_menu ul li p {margin-top: 20px; color: #fff; font-weight: 700; font-size: 30px; line-height: 1.167em; height: 70px; display: flex; align-items: center; justify-content: center; text-align: center; z-index:1; position:relative;}
+.quick_menu ul li a.go_view {z-index:1;}
+
+/* ============================== [ 공지사항 ] ========================================================================================== */
+.notice {background-color: #fff; padding:40px 128px; box-sizing: border-box;}
+.notice .cotn {display: flex;}
+
+.noti_wrap {width: calc(33.33% - 8px);}
+.noti_wrap ~ .noti_wrap {margin-left: 12px;}
+.noti_wrap .noti_tit {padding:17px 0; border-top:2px solid rgba(89, 89, 89, .5); border-bottom:2px solid rgba(89, 89, 89, .5);}
+.noti_wrap .noti_tit a {font-weight: 500; font-size: 28px; padding-left: 10px;}
+.noti_wrap .noti_list ul li {position: relative; padding:0 11px 0 36px; display: flex; align-items: center; justify-content: space-between; margin-top: 16px;}
+.noti_wrap .noti_list ul li::before {display: block; content: ''; width: 8px; height: 8px; background-color: #178f81; border-radius: 50%; position: absolute; left: 11px; top: 50%; transform: translateY(-50%);}
+.noti_wrap .noti_list ul li .title {font-size: 22px; white-space:nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.591em; width: calc(100% - 85px);}
+.noti_wrap .noti_list ul li .title:hover {text-decoration: underline;}
+.noti_wrap .noti_list ul li .date {font-weight: 300; font-size: 16px; line-height: 2.188em;}
+
+
+/* ============================== [ FOOTER ] ========================================================================================== */
+#footer {background-color: rgba(3, 146, 96, .75); padding:20px; text-align: center;}
+#footer * {color: #fff; font-size: 18px; line-height: 1.333em; word-break: keep-all;}
+#footer .terms_btn {display: flex; justify-content: center;}
+#footer .terms_btn a ~ a {padding-left: 32px; position: relative;}
+#footer .terms_btn a ~ a::before {display: block; content: ''; width: 2px; height: 16px; background-color: #fff; position: absolute; left: 15px; top: 5px;}
+
+/**************************************************************************************************************************************************************************************************
+*************************************************** 《《《 MOBILE Layout 》》》 ***************************************************************************************************************
+***************************************************************************************************************************************************************************************************/
+
+/* PC */
+@media only screen and (max-width:1400px){
+	/* ============================== [ 교통정보 ] ========================================================================================== */
+	.traffic_area {padding: 50px 30px 30px;}
+
+	/* 평균속도/시간 */
+	.info_txt_wrap .info_txt.incheon {left: 30px; top: 405px;}
+}
+
+@media only screen and (max-width:1350px) {
+	/* ************************************************************************************************************************************************************
+							《 PC_GNB 》
+	************************************************************************************************************************************************************ */
+	#pc_head {padding:14px 30px 14px 20px;}
+
+	/* 메뉴 */
+	.lnb_menu li ~ li {margin-left:30px;}
+	.lnb_menu a {font-size:20px;}
+	.util_menu {margin-left:70px;}
+	.util_menu li ~ li {margin-left:20px;}
+
+	/* ============================== [ 교통정보 ] ========================================================================================== */
+	.traffic_area {padding: 50px 30px 30px 0;}
+
+	/* 교통 상태 */
+	.traffic_wrap {display:block; width: 100%; max-width: 660px; margin: 50px auto 0; position: relative;}
+	.traffic_wrap .inner {justify-content:center;}
+	.traffic_wrap .inner.inner_01 {width:100%;}
+	.traffic_wrap .inner.inner_02 {width:100%; margin-top:215px; flex-direction: row-reverse;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child {position:absolute; top:242px; right:-6%; margin: 0;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child .trf_bar {transform: rotate(90deg);}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child .trf_top .trf_bar {margin-left: 20px;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child .trf_btm .trf_bar {margin-top: -18px;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child .trf_top .arrow_right {transform: rotate(90deg) translateX(15px); margin: 0 0 0 103px;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child .trf_btm .arrow_left {transform: rotate(90deg) translateX(-7px); margin: 0 0 0 42px;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child .trf_top span {margin-bottom: 0; position: absolute; right: -35px; top: 50%; transform: translateY(-50%);}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child .trf_btm span {margin-top: 0; position: absolute; left: -15px; top: 50%; transform: translateY(-50%);}
+
+	/* 평균속도/시간 */
+	.info_txt_wrap .info_txt.incheon {position: relative; left: 0; top: 0; justify-content: flex-end; margin-top: 14px;}
+
+	/* ic 영역 */
+	.traffic_wrap .ic_wrap p {margin-top:16px;}
+
+	/* ============================== [ 바로가기메뉴 ] ========================================================================================== */
+	.quick_menu ul li {height:200px;}
+	.quick_menu ul li p {font-size:20px; margin-top:12px; line-height:1.100em; height:44px;}
+	.quick_menu ul li .quick {background-size: 70px 55px; width:70px; height:55px;}
+
+	/* ============================== [ 공지사항 ] ========================================================================================== */
+	.notice {padding:20px 12px;}
+	.noti_wrap .noti_tit {padding:10px 0;}
+	.noti_wrap .noti_tit a {font-size:20px;}
+	.noti_wrap .noti_list ul li {margin-top:12px;}
+	.noti_wrap .noti_list ul li .title {font-size: 16px; line-height:1.5em;}
+	.noti_wrap .noti_list ul li .date {font-size: 12px; line-height: 2em;}
+}
+
+/* 테블릿 */
+@media only screen and (max-width:1024px) {
+	/* 헤더 */
+	header {background-color:rgba(3, 146, 96, .9);}
+	#pc_head  {display: none;}
+	#m_head {display: flex;}
+
+	/* #contents */
+	#contents {width: 100%; margin-left: 0;}
+
+	/* ============================== [ 교통정보 ] ========================================================================================== */
+	.traffic_area {padding: 25px 20px; background: #fff;}
+
+	/* 평균속도/시간 */
+	.info_txt_wrap .info_txt p {font-size: 20px; line-height: 1em;}
+	.info_txt_wrap .info_txt .info_detail {margin-left: 15px;}
+	.info_txt_wrap .info_txt .info_detail p {font-size: 16px; line-height: 1.250em;}
+
+	/* ic 영역 */
+	.traffic_wrap {max-width: 540px;}
+	.traffic_wrap {margin-top: 30px;}
+	.traffic_wrap .ic_wrap .img {width:73px; height:73px;}
+	.traffic_wrap .ic_wrap p {font-size:17px; margin-top:10px;}
+
+	/* 교통 상태 */
+	.traffic_wrap .trf_area {max-width: 150px;}
+	.traffic_wrap .trf_area span {font-size:14px;}
+	.traffic_wrap .trf_area .arrow_right {margin: 0 0 5px auto;}
+	.traffic_wrap .trf_area .arrow_left {margin: 5px auto 0 0;}
+	.traffic_wrap .trf_area .trf_top span {margin-bottom: 0;}
+	.traffic_wrap .trf_area .trf_btm span {margin-top: 0;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child {top: 182px; right: -5%;}
+	.traffic_wrap .inner.inner_02 {margin-top: 168px;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child .trf_top .arrow_right {transform: rotate(90deg) translateX(50px);margin: 0 0 0 80px;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child .trf_btm .arrow_left {transform: rotate(90deg) translateX(-50px);margin: 0 0 0 25px;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child .trf_top span {top: 155%;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child .trf_btm span {top: -75%;}
+
+	/* 범례 */
+	.legend {padding-top: 60px;}
+	.legend .time {font-size: 14px; margin-bottom: 16px;}
+	.legend .lgd_wrap p {font-size: 14px;}
+	.legend .lgd_wrap .trf_bar {width: 30px; height: 8px;}
+
+	/* ============================== [ 메인이미지 ] ========================================================================================== */
+	.main_area {height: auto;}
+	.main_area .main_txt {padding: 200px 0 300px;}
+	.main_area .main_txt p {font-size: 24px; margin-top: 20px;}
+
+	/* ============================== [ 바로가기메뉴 ] ========================================================================================== */
+	.quick_menu {padding:4px 4px 4px 0; background-color:#fff;}
+	.quick_menu ul {flex-wrap: wrap;}
+	.quick_menu ul li ~ li {margin-left:4px;}
+	.quick_menu ul li.cctv {display:block;}
+	.quick_menu ul li {height:auto; width:calc(33.33% - 4px); flex:none; background-color:#039260; margin-left:4px; box-sizing:border-box; padding:20px 5px; background-image:none !important;}
+	.quick_menu ul li::after {display:none;}
+	.quick_menu ul li:nth-child(n+4) {margin-top:4px;}
+	.quick_menu ul li p {font-size:20px; margin-top:12px; line-height:1.25em; height:50px;}
+
+	/* ============================== [ 공지사항 ] ========================================================================================== */
+	.notice {padding:10px 8px; height:250px;}
+	.notice .cotn {position:relative; display:block; height:100%; border-top:1px solid #acacac;}
+	.notice .cotn:after {display:block; content: ''; width:100%; height:1px; background-color:#acacac; position:absolute; left:0; top:40px;}
+	.noti_wrap {width: auto; float:left;}
+	.noti_wrap ~ .noti_wrap {margin-left: 0;}
+	.noti_wrap .noti_list {display:none; position:absolute; left:0; top:44px; width:100%;}
+	.noti_wrap.on .noti_list {display:block;}
+	.noti_wrap .noti_tit {border:none;}
+	.noti_wrap .noti_tit a {padding-left:14px; font-size:18px;}
+	.noti_wrap.on .noti_tit a {font-weight:700; font-size:20px;}
+
+	/* ============================== [ FOOTER ] ========================================================================================== */
+	#footer {background-color: rgba(3, 146, 96, 1);}
+}
+
+/* 모바일 */
+@media only screen and (max-width:768px) {
+	/* ============================== [ 메인이미지 ] ========================================================================================== */
+	.main_area {height: auto;}
+	.main_area .main_txt {padding: 250px 0 200px;}
+	.main_area .main_txt p {font-size: 16px; margin-top: 12px; padding: 0 20px;}
+
+	/* ============================== [ 바로가기메뉴 ] ========================================================================================== */
+	.quick_menu ul li {padding:15px 5px;}
+	.quick_menu ul li p {font-size:18px; margin-top:8px; height:40px;}
+	.quick_menu ul li .quick {background-size: 50px auto; width:50px; height:38px;}
+
+	/* ============================== [ 교통정보 ] ========================================================================================== */
+
+	/* 교통 상태 */
+	.traffic_wrap .trf_area {max-width: 90px;}
+
+	/* ic 영역 */
+	.traffic_wrap {max-width: 400px;}
+	.traffic_wrap .ic_wrap .img {width:65px; height:65px;}
+	.traffic_wrap .ic_wrap p {font-size:16px; font-weight: 500; margin-top:10px; width: 75px;}
+
+	/* 교통 상태 */
+	.traffic_wrap .trf_area .arrow_right,
+	.traffic_wrap .trf_area .arrow_left {width: 37px; height: 6px;}
+	.traffic_wrap .trf_area span {font-size: 13px; line-height:1em;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child {top: 150px; right: 0;}
+	.traffic_wrap .inner.inner_02 {margin-top: 110px;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child .trf_btm span {left: -34px;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child .trf_top span {right: -53px;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child .trf_top .arrow_right {transform: rotate(90deg) translateX(37px);margin: 0 0 0 62px;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child .trf_btm .arrow_left {transform: rotate(90deg) translateX(-35px);margin: 0 0 0 13px;}
+
+	/* 범례 */
+	.legend {padding-top: 50px;}
+	.legend .cotn {flex-wrap: wrap;}
+	.legend .lgd_wrap {width: calc(50% - 5px);}
+	.legend .lgd_wrap ~ .lgd_wrap {margin-left: 0;}
+	.legend .lgd_wrap:nth-child(2n) {margin-left: 10px;}
+	.legend .lgd_wrap:nth-child(2n - 1) {justify-content: flex-end;}
+	.legend .lgd_wrap .trf_bar {width: 30px; height: 8px;}
+
+	/* ============================== [ FOOTER ] ========================================================================================== */
+	#footer {padding:20px 10px;}
+	#footer * {font-size: 14px;}
+	#footer .terms_btn a ~ a {padding-left: 24px;}
+	#footer .terms_btn a ~ a::before {height: 12px; left: 12px; top: 4px;}
+	/* #footer address span {display:block;} */
+}
+
+@media only screen and (max-width:550px) {
+	/* 메인이미지 */
+	.main_area .main_txt {padding: 200px 0 150px;}
+
+	/* ============================== [ 교통정보 ] ========================================================================================== */
+	.info_txt_wrap .info_txt p {font-size: 16px;}
+	.info_txt_wrap .info_txt .info_detail p {font-size: 14px;}
+
+	/* ic 영역 */
+	.traffic_wrap {max-width: 400px; margin-top: 20px;}
+	.traffic_wrap .ic_wrap .img {width:55px; height:55px;}
+	.traffic_wrap .ic_wrap {margin-top: 8px;}
+	.traffic_wrap .ic_wrap p {font-size: 14px;}
+
+	.traffic_wrap .trf_area {margin: 0 2px; max-width: 65px;}
+	.traffic_wrap .trf_area span {font-size: 12px;}
+	.traffic_wrap .trf_area .trf_btm {margin-top: 3px;}
+	.traffic_wrap .trf_area .trf_top span {margin-bottom: -1px;}
+	.traffic_wrap .trf_area .trf_btm span {margin-top: -1px;}
+	.traffic_wrap .trf_area .arrow_left {margin-top: 2px;}
+	.traffic_wrap .trf_area .arrow_right {margin-bottom: 2px;}
+	.traffic_wrap .inner.inner_02 {margin-top: 95px;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child {top: 113px; right: 50px;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child .trf_top .trf_bar {margin-left: 15px;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child .trf_btm .trf_bar {margin-top: -15px;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child .trf_top .arrow_right {margin-left: 42px; transform: rotate(90deg) translateX(24px);}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child .trf_top span {right: -40px; width: 42px; top: 97%;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child .trf_btm span {left: -30px; top: -30%; width: 42px;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child .trf_btm .arrow_left {transform: rotate(90deg) translateX(-24px);margin: 0 0 0 0px;}
+
+	/* 범례 */
+	.legend .cotn {display: block;}
+	.legend .lgd_wrap {width: 142px; margin: 5px auto  0 !important; justify-content: none !important;}
+}
+
+@media only screen and (max-width:400px) {
+	/* ============================== [ 교통정보 ] ========================================================================================== */
+	.traffic_wrap .ic_wrap p {width: 50px;}
+	.traffic_wrap .inner.inner_02 {margin-top: 125px;}
+	.traffic_wrap .inner.inner_01 .trf_area:last-child {top: 130px; right: 25px;}
+
+	/* ============================== [ 메인이미지 ] ========================================================================================== */
+	.main_area .main_txt p {font-size: 13px; margin-top: 12px;}
+
+	/* ============================== [ 바로가기메뉴 ] ========================================================================================== */
+	.quick_menu ul li {padding:15px 5px;}
+	.quick_menu ul li p {font-size:14px; line-height:1.143em; margin-top:4px; height:32px;}
+
+	/* ============================== [ 공지사항 ] ========================================================================================== */
+	.notice {height: 200px;}
+	.noti_wrap .noti_tit a {font-size: 16px; padding-left: 10px;}
+	.noti_wrap.on .noti_tit a {font-size: 18px;}
+
+	.noti_wrap .noti_list ul li {margin-top: 8px;}
+	.noti_wrap .noti_list ul li .title {font-size: 14px; line-height: 1.25em;}
+	.noti_wrap .noti_list ul li .date {line-height: 1.5em;}
+}
+
+@media only screen and (max-width:343px) {
+	/* ============================== [ 교통정보 ] ========================================================================================== */
+	.legend {padding-top: 30px;}
+	.traffic_wrap .inner.inner_02 {margin-top: 117px;}
+}
